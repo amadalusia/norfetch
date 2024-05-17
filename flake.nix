@@ -8,5 +8,17 @@
   };
 
   outputs = inputs @ {flake-parts, ...}:
-    flake-parts.lib.mkFlake {inherit inputs;} {};
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      perSystem = {
+        devShells.default = {pkgs, ...}:
+          pkgs.mkShell {
+            nativeBuildInputs = with pkgs; [
+              python312
+            ];
+          };
+      };
+      systems = [
+        "x86_64-linux"
+      ];
+    };
 }
