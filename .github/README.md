@@ -1,6 +1,6 @@
 <center>
-  <h3>norfetch 🇳🇴</h3>
-  <p>The Python-based system fetch made by the sole reason of swaying a Norway flag on your rice!</p>
+  <h3>norfetch 🇳🇴🇸🇪🇩🇰🇫🇮🇮🇸</h3>
+  <p>The Python-based system fetch made by the sole reason of swaying your flag of the north on your rice!</p>
   <img src="./assets/screenshot.png">
 </center>
 
