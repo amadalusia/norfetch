@@ -6,7 +6,7 @@
 
 ---
 
-# Why?
+### Why?
 
 ![this is why lmao](./assets/why.png)
 
