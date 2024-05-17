@@ -3,22 +3,21 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    pydev.url = "github:oceansprint/pydev";
-    poetry2nix.url = "github:nix-community/poetry2nix";
   };
 
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      perSystem = {
-        devShells.default = {pkgs, ...}:
-          pkgs.mkShell {
-            nativeBuildInputs = with pkgs; [
-              python312
-            ];
-          };
+      perSystem = {pkgs, ...}: {
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            python312
+          ];
+        };
+        formatter = pkgs.alejandra;
       };
       systems = [
         "x86_64-linux"
+        "aarch64-darwin"
       ];
     };
 }
