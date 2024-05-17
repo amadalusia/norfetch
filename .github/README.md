@@ -9,3 +9,4 @@
 # Why?
 
 ![this is why lmao](./assets/why.png)
+(this silly billy however was too tired to actually do the nordic countries, so its only norway for now)
