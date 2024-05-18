@@ -6,12 +6,31 @@
 
 ---
 
-### Why?
+### why?
 
 ![this is why lmao](./assets/why.png)
-(this silly billy however was too tired to actually do the nordic countries, so its only norway for now)
 
 ---
 
-> [!IMPORTANT]
-> The flake doesn't work at the minute, but please do wait, as I plan to get it set up soon!
+### installing on nix
+
+add this repo as an input in your flake.nix:
+
+```nix
+inputs = {
+  norfetch = {
+    url = "github:balkenix/norfetch";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+};
+```
+
+and add the package:
+
+```nix
+# home.nix
+
+home.packages = [
+  inputs.norfetch.packages.${pkgs.system}.default
+];
+```
