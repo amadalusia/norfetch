@@ -34,3 +34,10 @@ home.packages = [
   inputs.norfetch.packages.${pkgs.system}.default
 ];
 ```
+
+---
+
+### norfetch-inspired projects
+
+[bakafetch (unofficial name) by arutonee](https://gist.github.com/arutonee1/79a7990978c3a61405ae956ece811f8e)
+![author notes]
