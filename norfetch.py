@@ -124,13 +124,17 @@ class SystemInformation:
 
 
 def print_error():
-    print("please return an argument")
+    print(
+        f"error: {colours['red']}no arguments given when one was needed.{colours['white']}"
+    )
     print("")
     print("--norway  = norwegian flag")
     print("--iceland = icelandic flag")
     print("--denmark = danish flag")
     print("--finland = finnish flag")
     print("--sweden  = swedish flag")
+
+    sys.exit(-1)
 
 
 def strfdelta(tdelta, fmt):
