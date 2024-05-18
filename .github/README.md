@@ -39,6 +39,6 @@ home.packages = [
 
 ### norfetch-inspired projects
 
-[bakafetch (unofficial name) by arutonee](https://gist.github.com/arutonee1/79a7990978c3a61405ae956ece811f8e)
+[bakafetch (unofficial name) by arutonee](https://gist.github.com/arutonee1/79a7990978c3a61405ae956ece811f8e)[^1]
 
-![author notes](./assets/bakafetch.png)
+[^1]: ![author notes](./assets/bakafetch.png)
