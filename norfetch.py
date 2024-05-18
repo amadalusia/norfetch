@@ -34,15 +34,12 @@ class SystemInformation:
 
         try:
             arg = sys.argv[1]
+
         except:
-            if arg not in arguments:
-                print("please return an argument")
-                print("")
-                print("--norway  = norwegian flag")
-                print("--iceland = icelandic flag")
-                print("--denmark = danish flag")
-                print("--finland = finnish flag")
-                print("--sweden  = swedish flag")
+            print_error()
+
+        if arg not in arguments:
+            print_error()
 
         if arguments[0] in arg:
             print(
@@ -124,6 +121,16 @@ class SystemInformation:
             datetime.timedelta(seconds=int(uptime_as_secs)),
             "{days:02}:{hours:02}:{minutes:02}:{seconds:02}",
         )
+
+
+def print_error():
+    print("please return an argument")
+    print("")
+    print("--norway  = norwegian flag")
+    print("--iceland = icelandic flag")
+    print("--denmark = danish flag")
+    print("--finland = finnish flag")
+    print("--sweden  = swedish flag")
 
 
 def strfdelta(tdelta, fmt):
