@@ -35,13 +35,14 @@ class SystemInformation:
         try:
             arg = sys.argv[1]
         except:
-            print("please return an argument")
-            print("")
-            print("--norway  = norwegian flag")
-            print("--iceland = icelandic flag")
-            print("--denmark = danish flag")
-            print("--finland = finnish flag")
-            print("--sweden  = swedish flag")
+            if arg not in arguments:
+                print("please return an argument")
+                print("")
+                print("--norway  = norwegian flag")
+                print("--iceland = icelandic flag")
+                print("--denmark = danish flag")
+                print("--finland = finnish flag")
+                print("--sweden  = swedish flag")
 
         if arguments[0] in arg:
             print(
