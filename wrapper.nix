@@ -8,7 +8,7 @@ writeShellApplication {
   runtimeInputs = [python311];
 
   text = ''
-    if [[ -z "$1" ]]; then
+    if [ -z "$*" ]; then
       python3 ${./norfetch.py}
     fi
 
