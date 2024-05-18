@@ -8,6 +8,6 @@ writeShellApplication {
   runtimeInputs = [python311];
 
   text = ''
-    python3 ${./norfetch.py} \$\1
+    python3 ${./norfetch.py} $1
   '';
 }
