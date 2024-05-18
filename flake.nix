@@ -14,7 +14,7 @@
           ];
         };
         formatter = pkgs.alejandra;
-        packages.default = pkgs.callPackage ./wrapper.nix {};
+        packages.norfetch = pkgs.callPackage ./wrapper.nix {};
       };
       systems = [
         "x86_64-linux"

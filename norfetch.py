@@ -42,6 +42,7 @@ class SystemInformation:
             print_error()
 
         if arguments[0] in arg:
+            print("")
             print(
                 f"{colours['red']}███{colours['white']}██{colours['blue']}██{colours['white']}██{colours['red']}█████████   user:    {self.username}"
             )
