@@ -15,7 +15,7 @@
         };
         formatter = pkgs.alejandra;
         packages.norfetch = pkgs.callPackage ./wrapper.nix {};
-        apps.default.norfetch = "${config.packages.norfetch}/bin/norfetch";
+        apps.default.program = "${config.packages.norfetch}/bin/norfetch";
       };
       systems = [
         "x86_64-linux"
