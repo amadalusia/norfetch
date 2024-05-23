@@ -16,6 +16,7 @@ arguments = [
     "--denmark",
     "--finland",
     "--sweden",
+    "--faroe",
 ]
 
 
@@ -113,6 +114,21 @@ class SystemInformation:
             print(
                 f"{colours['blue']}█████{colours['yellow']}██{colours['blue']}███████████   kernel:  {self.kernel.sysname} {self.kernel.release} {self.kernel.machine}"
             )
+        if arguments[5] in arg:
+            print(
+                f"{colours['white']}███{colours['blue']}██{colours['red']}██{colours['blue']}██{colours['white']}█████████   user:    {self.username}"
+            )
+            print(
+                f"{colours['blue']}█████{colours['red']}██{colours['blue']}███████████   host:    {self.hostname}"
+            )
+            print(f"{colours['red']}██████████████████   up:      {self.uptime}")
+            print(
+                f"{colours['blue']}█████{colours['red']}██{colours['blue']}███████████   shell:   {self.shell}"
+            )
+            print(
+                f"{colours['white']}███{colours['blue']}██{colours['red']}██{colours['blue']}██{colours['white']}█████████   kernel:  {self.kernel.sysname} {self.kernel.release} {self.kernel.machine}"
+            )
+
 
     def get_uptime(self):
         with open("/proc/uptime", "r") as f:
@@ -150,3 +166,4 @@ def strfdelta(tdelta, fmt):
 norfetch = SystemInformation()
 
 norfetch.print_info()
+print("")
