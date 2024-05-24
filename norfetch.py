@@ -28,7 +28,7 @@ class Norfetch:
         self.username = os.getlogin()
         self.os_name = self.get_os()
         self.uptime = self.get_uptime()
-        self.shell = os.environ.get("SHELL", "???")
+        self.shell = self.get_shell()
         self.kernel = self.get_kernel()
 
         pass
@@ -65,6 +65,14 @@ class Norfetch:
         version = os.uname().release
         arch = os.uname().machine
         return f"{kernel} {version} {arch}"
+
+    def get_shell(self):
+        try:
+            path_to_shell = os.environ.get("SHELL", "this shouldn't be called lmao").split("/")
+        except:
+            return "???"
+
+        return path_to_shell[-1]
 
 def print_error_by_no_argument():
     print(
