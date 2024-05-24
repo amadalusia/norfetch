@@ -64,7 +64,7 @@ class Norfetch:
 
         return path_to_shell[-1]
 
-def print_error_by_no_argument():
+def no_argument():
     print(
         f"error: {colours['red']}no arguments given when one was needed.{colours['white']}"
     )
@@ -78,7 +78,7 @@ def print_error_by_no_argument():
 
     sys.exit(-1)
 
-def print_error_by_unknown_argument():
+def unknown_argument():
     print(
         f"error: {colours['red']}unknown argument{colours['white']}"
     )
@@ -108,7 +108,7 @@ try:
     first_argument = sys.argv[1]
 
 except:
-    print_error_by_no_argument()    
+    no_argument()    
 
 match first_argument:
     case "--norway":
@@ -124,4 +124,4 @@ match first_argument:
     case "--faroe":
         norfetch.print_info(colours['white'], colours['blue'], colours['red'])
     case _:
-        print_error_by_unknown_argument()
+        unknown_argument()
