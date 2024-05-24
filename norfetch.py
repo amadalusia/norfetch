@@ -36,11 +36,11 @@ class Norfetch:
     def print_info(self, colour1, colour2, colour3):
         white = colours['white']
         # █ copy me!
-        print(f"{colour1}██{colour2}██{colour3}██{colour2}██{colour1}██████{white}  |  {self.username}@{self.hostname}")
+        print(f"\n{colour1}██{colour2}██{colour3}██{colour2}██{colour1}██████{white}  |  {self.username}@{self.hostname}")
         print(f"{colour2}████{colour3}██{colour2}████████{white}  |  os:     {self.os_name}")
         print(f"{colour3}██████████████{white}  |  up:     {self.uptime}")
         print(f"{colour2}████{colour3}██{colour2}████████{white}  |  shell:  {self.shell}")
-        print(f"{colour1}██{colour2}██{colour3}██{colour2}██{colour1}██████{white}  |  kernel: {self.kernel}")
+        print(f"{colour1}██{colour2}██{colour3}██{colour2}██{colour1}██████{white}  |  kernel: {self.kernel}\n")
 
     def get_uptime(self):
         with open("/proc/uptime", "r") as f:
@@ -132,5 +132,3 @@ if first_argument == arguments[4]:
     norfetch.print_info(colours['blue'], colours['blue'], colours['yellow'])
 if first_argument == arguments[5]:
     norfetch.print_info(colours['white'], colours['blue'], colours['red'])
-
-print("")
