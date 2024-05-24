@@ -12,16 +12,6 @@ colours = {
     "white": "\x1b[37;49m",
 }
 
-arguments = [
-    "--norway",
-    "--iceland",
-    "--denmark",
-    "--finland",
-    "--sweden",
-    "--faroe",
-]
-
-
 class Norfetch:
     def __init__(self) -> None:
         self.hostname = socket.gethostname()
@@ -118,17 +108,20 @@ try:
     first_argument = sys.argv[1]
 
 except:
-    print_error_by_no_argument()
+    print_error_by_no_argument()    
 
-if first_argument == arguments[0]:
-    norfetch.print_info(colours['red'], colours['white'], colours['blue'])
-if first_argument == arguments[1]:
-    norfetch.print_info(colours['blue'], colours['white'], colours['red'])
-if first_argument == arguments[2]:
-    norfetch.print_info(colours['red'], colours['red'], colours['white'])
-if first_argument == arguments[3]:
-    norfetch.print_info(colours['white'], colours['white'], colours['blue'])
-if first_argument == arguments[4]:
-    norfetch.print_info(colours['blue'], colours['blue'], colours['yellow'])
-if first_argument == arguments[5]:
-    norfetch.print_info(colours['white'], colours['blue'], colours['red'])
+match first_argument:
+    case "--norway":
+        norfetch.print_info(colours['red'], colours['white'], colours['blue'])
+    case "--iceland":
+        norfetch.print_info(colours['blue'], colours['white'], colours['red'])
+    case "--denmark":
+        norfetch.print_info(colours['red'], colours['red'], colours['white'])
+    case "--finland":
+        norfetch.print_info(colours['white'], colours['white'], colours['blue'])
+    case "--sweden":
+        norfetch.print_info(colours['blue'], colours['blue'], colours['yellow'])
+    case "--faroe":
+        norfetch.print_info(colours['white'], colours['blue'], colours['red'])
+    case _:
+        print_error_by_unknown_argument()
