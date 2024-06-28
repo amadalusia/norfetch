@@ -1,3 +1,6 @@
+### This tool was made while `balkenix` was still my identity.
+---
+
 <center>
   <h3>norfetch 🇳🇴🇸🇪🇩🇰🇫🇮🇮🇸</h3>
   <p>The Python-based system fetch made by the sole reason of swaying your flag of the north on your rice!</p>
